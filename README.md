@@ -1,6 +1,5 @@
 # GlobTest
 
-
 ## Enoncé
 
 [Echo](https://www.instagram.com/globalisecho/?hl=fr), mascotte de l'équipe de [Globalis](https://www.globalis-ms.com/), a découvert une fonction `foo()` bien mystérieuse. Hélas, il n'a pas accès au code. Curieux et grand amateur de [rétro-ingénierie](https://fr.wikipedia.org/wiki/R%C3%A9tro-ing%C3%A9nierie), Echo s'est amusé à appeler cette fonction, en injectant des données en entrée et en récoltant les sorties. Le comportement de la fonction `foo()` est le suivant :
@@ -17,21 +16,20 @@ Le challenge, si vous l'acceptez, serait d'aider Echo à comprendre ce que fait 
 
 ### Question 1
 
-Expliquez, en quelques lignes, ce que fait cette fonction.
+ > Expliquez, en quelques lignes, ce que fait cette fonction.
+
+La fonction `foo` prend en entrée un tableau d'intervalles. Elle retourne un tableau d'intervalles fusionnés, c'est-à-dire que les intervalles qui se chevauchent sont fusionnées et les intervalles qui ne se chevauchent pas sont conservés tels quels.
+
+Comme par example, `foo([[0, 5], [3, 10]])` retourne `[[0, 10]]` car les intervalles `[0, 5]` et `[3, 10]` se chevauchent ou bien `foo([[0, 3], [6, 10]])` retourne `[[0, 3], [6, 10]]` car les intervalles `[0, 3]` et `[6, 10]` ne se chevauchent pas.
 
 ### Question 2
 
-Codez cette fonction (idéalement en CLI) en utilisant le langage PHP ou JavaScript.
-Merci de fournir un fichier contenant :
+Voir le fichier foo.php.
 
-- la fonction, 
-- l'appel de la fonction, avec un jeu de test en entrée,
-- l'affichage du résultat en sortie.
+```bash
+php -f foo.php
+```
 
 ### Question 3
 
-Précisez en combien de temps vous avez implémenté cette fonction.
-
-## Merci
-
-Par avance, un grand merci pour le temps que vous consacrerez à ce challenge, en espérant vous voir rejoindre très prochainement [nos équipes](https://www.globalis-ms.com/jobs/) ;) 
+Cela m'a pris 25 minutes pour réaliser ce test.
